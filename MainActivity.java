@@ -15,10 +15,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         txt=findViewById(R.id.txt);
         b=findViewById(R.id.btn);
+        txt.setVisibility(View.GONE);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                txt.setVisibility(View.VISIBLE);
                 txt.setText("Updated Text");
+
                 b.setVisibility(View.GONE);
             }
         });
